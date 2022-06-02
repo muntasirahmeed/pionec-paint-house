@@ -5,9 +5,10 @@ import { Swiper, SwiperSlide } from "swiper/react";
 // Import Swiper styles
 import "swiper/css";
 import "swiper/css/pagination";
+import "swiper/css/autoplay";
 
 // import required modules
-import { Pagination } from "swiper";
+import { Pagination ,Autoplay} from "swiper";
 import img2 from "../../assests/imges/cartoon.png";
 
 const Testimonials = () => {
@@ -45,6 +46,7 @@ const Testimonials = () => {
           pagination={{
             clickable: true,
           }}
+          autoplay={true}
           breakpoints={{
             "@0.00": {
               slidesPerView: 1,
@@ -63,7 +65,7 @@ const Testimonials = () => {
               spaceBetween: 10,
             },
           }}
-          modules={[Pagination]}
+          modules={[Pagination,Autoplay]}
           className="mySwiper h-72"
         >
           {sortedReview.map((r) => (
